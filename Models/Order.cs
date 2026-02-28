@@ -28,5 +28,12 @@ namespace SieMarket.Models
 
             return total;
         }
+
+        public override string ToString()
+        {
+            int totalItems = Items.Sum(i => i.Quantity);
+            
+            return $"Order [{OrderDate:yyyy-MM-dd HH:mm}] - {totalItems} item(s) - Total: {CalculateFinalPrice():C}";
+        }
     }
     }

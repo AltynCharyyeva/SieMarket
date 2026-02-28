@@ -19,5 +19,10 @@ namespace SieMarket.Models
         {
             return Quantity * Price;
         }
+
+        public override string ToString()
+        {
+            return $"{ProductName} - Qty: {Quantity} ({Price}€)";
+        }
     }
 }
